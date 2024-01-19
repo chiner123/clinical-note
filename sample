@@ -48,7 +48,10 @@
 
         <label for="patientDOB">Date of Birth:</label>
         <input type="date" id="patientDOB" name="patientDOB" required>
-
+        
+        <label for="patientMRN">MRN:</label>
+        <input type="MRN" id="patientMRN" name="patientMRN" required>
+       
         <!-- Clinical Note Headers -->
         <h2>Chief Complaint</h2>
         <textarea id="chiefComplaint" name="chiefComplaint" rows="4" required></textarea>
