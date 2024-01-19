@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Notes Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Clinical Notes Form</h2>
+
+    <form action="/submit-clinical-notes" method="post">
+        
+        <!-- Patient Information -->
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+
+        <label for="patientDOB">Date of Birth:</label>
+        <input type="date" id="patientDOB" name="patientDOB" required>
+
+        <!-- Clinical Note Headers -->
+        <h2>Chief Complaint</h2>
+        <textarea id="chiefComplaint" name="chiefComplaint" rows="4" required></textarea>
+
+        <h2>Medical History</h2>
+        <textarea id="medicalHistory" name="medicalHistory" rows="4" required></textarea>
+
+        <h2>Physical Examination</h2>
+        <textarea id="physicalExamination" name="physicalExamination" rows="4" required></textarea>
+
+        <!-- Discrete Data Fields -->
+        <h2>Vital Signs</h2>
+        <label for="bloodPressure">Blood Pressure:</label>
+        <input type="text" id="bloodPressure" name="bloodPressure">
+
+        <label for="heartRate">Heart Rate:</label>
+        <input type="number" id="heartRate" name="heartRate">
+
+        <!-- Additional Fields as Needed -->
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Clinical Notes</button>
+
+    </form>
+
+</body>
+</html>
